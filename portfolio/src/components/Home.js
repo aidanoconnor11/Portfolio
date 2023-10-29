@@ -1,20 +1,52 @@
+// Home.js
 import React from "react";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
 
 function Home() {
   return (
-    <div>
-      <h2>Home Page</h2>
-      <img
-        src="https://media.licdn.com/dms/image/C4E03AQFprW56FVev7Q/profile-displayphoto-shrink_800_800/0/1662871476796?e=1703721600&v=beta&t=GgAiutvi_NOsWHgeUoHkp4dwjpka0m_0nQxtncUaW34"
-        alt="Aidan"
+    <Grid container style={{ height: "100vh" }}>
+      <Grid
+        item
+        xs={6}
         style={{
-          width: "500px",
-          height: "500px",
-          borderRadius: "50%",
-          marginRight: "10px",
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "40px 20px 20px", // Adjusted paddingTop and added marginBottom
+          backgroundColor: "#f0f0f0", // Adjust the background color as needed
         }}
-      />
-    </div>
+      >
+        <Typography variant="h4">
+          Hi, I'm <strong>Aidan O'Connor</strong>
+        </Typography>
+        <Typography variant="subtitle1" align="center">
+          a computer science student at Cornell with experiences in Full Stack
+          Development and Data Science
+        </Typography>
+      </Grid>
+      <Grid
+        item
+        xs={6}
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src="https://imageupload.io/ib/sQIaYOm4hXbkGk0_1698611780.jpg"
+          style={{
+            width: "400px",
+            height: "600px",
+          }}
+        />
+      </Grid>
+    </Grid>
   );
 }
 
